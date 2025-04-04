@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Películas</title>
+</head>
+<body>
+    <h1>Listado de Películas</h1>
+    <ul>
+        {% for pelicula in peliculas %}
+            <li>
+                Título: {{ pelicula.titulo }}<br>
+                Código: {{ pelicula.codpelicula }}<br>
+                Fecha de Producción: {{ pelicula.fecha_prod }}<br>
+                Género: {{ pelicula.genero }}<br>
+            </li>
+        {% empty %}
+            <li>No hay películas disponibles.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

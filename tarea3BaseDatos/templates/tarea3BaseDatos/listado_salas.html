@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Salas</title>
+</head>
+<body>
+    <h1>Listado de Salas</h1>
+    <ul>
+        {% for sala in salas %}
+            <li>
+                Código de Sala: {{ sala.codsala }}<br>
+                Tipo de Sonido: {{ sala.tipo_sonido }}<br>
+                Número de Filas: {{ sala.numfilas }}<br>
+                Número de Asientos por Fila: {{ sala.numasiporfilas }}<br>
+            </li>
+        {% empty %}
+            <li>No hay salas disponibles.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
